@@ -18,3 +18,13 @@ width: 350px;
   width: 350px;
   height: auto;
 }
+
+.ktyping {
+  margin-right: auto;
+  width: 200px;
+}
+
+.utyping {
+  margin-left: auto;
+  width: 100px;
+}
