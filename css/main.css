@@ -9,11 +9,12 @@
 .karolina {
 margin-right: auto;
 background-color: blue;
-width: 350px
+width: 350px;
 }
 
 .utilisateur {
   margin-left: auto;
   background-color: red;
   width: 350px;
+  height: auto;
 }
