@@ -1,27 +1,15 @@
 
 var pseudo="" ;
-
-console.log($("#chat").height());
-
-
 var Robot;
-
-// var Robot = ["Bonjour " + pseudo, "phrase 2", "phrase 3", "phrase 4", "je dois partir"];
-
 var personne;
 
 
-
-
-var total = 0;
-
-// $("#lancerJeu").click(function(){$("#presentation").hide();
-// pseudo = $("#presentation :text").val();
-// Robot = ["Bonjour " + pseudo, "phrase 2", "phrase 3", "phrase 4", "je dois partir"];
-// $("#ecrire").show();
-// $("#chat").show();})
-var tamp=0;
-
+/**
+ * chatter - charge the dialog box
+ *
+ * @param  {type} personne girl 1 , 2 or 3
+ * @return {type}          no return
+ */
 function chatter(personne) {
   pseudo = $("#presentation :text").val();
   var girl1 = ["Bonjour " + pseudo + " Comment vas tu ?", "Est ce que tu geek ?","Moi j'aime bien geeker","Tu me conseille quel explorateur pour explorer ton coeur ?", "je dois partir" ];
@@ -46,16 +34,28 @@ if (personne == 'girl1') {
 $("#fillechoisie").append($("<img src= 'img/" + personne +".png'></img>"));
 
 
-
-
 }
 
+
+
+/**
+ * typing - before the girl's answer
+ *
+ * @return {type}  no return
+ */
 function typing () {
 
   $("#chat").append($("<img class='ktyping'></img>").attr("src","img/typing3.gif"));
-  // $("#chat img:last").addClass("ktyping");
+
 }
 
+
+
+/**
+ * RobotChat - add the   the girls answer
+ *
+ * @return {type}  no return
+ */
 function RobotChat() {
   console.log($("#chat p:last").height());
 pseudo = $("#presentation :text").val();
@@ -76,6 +76,13 @@ if ($("#chat p:last").text()=="je dois partir") {
 
 }
 
+
+
+/**
+ * chatting - add the input text
+ *
+ * @return {type}  no return
+ */
 function chatting(){
   $("#chat").append("<p class='utilisateur'>" + $("#ecrire :text").val() + "</p>");
   $("#ecrire :text").val("")
@@ -87,7 +94,7 @@ function chatting(){
 }
 
 
-
+// ******************************************fin des fonctions***************************************
 
 $('#ecrire :text').keypress(function(e){
     if( e.which == 13 ){
@@ -97,10 +104,3 @@ $('#ecrire :text').keypress(function(e){
 
 
 $("#ecrire :submit").click(chatting);
-
-
-
-
-
-// });
-// .addClass("utilisateur")
