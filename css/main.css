@@ -54,38 +54,73 @@ text-align: center;
 }
 
 #chat {
-  width: 800px;
-  height: 500px;
+  width: 90%;
+  margin: auto;
+  height: 400px;
+  padding: 10px;
   display: flex;
   flex-flow: column nowrap;
   overflow: scroll;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 body {
-  min-height: 80vh;
+  min-height: 84vh;
   width: 100%;
   background-image: url(../img/8007.jpg);
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center;
+}
 
+#fillechoisie img{
+  position: absolute;
+  top : 10px;
+  left: 10px;
+  width: 100Px;
+}
+
+#ecrire {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-flow: row ;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+#ecrire input:first-child {
+  width: 85%;
 }
 
 #ecrire , #chat{
   display: none;
 }
 
-.karolina {
+
+
+
+#chat .karolina {
 margin-right: auto;
-background-color: blue;
-width: 350px;
+background-color: rgba(0,182,222,0.7);
+border-radius: 10px;
+width: auto;
+max-width: 80%;
+padding: 20px;
+margin-left: 10px;
 }
 
-.utilisateur {
+ #chat .utilisateur {
+  border-radius: 10px;
+  width: auto;
+  max-width: 80%;
+  padding: 20px;
   margin-left: auto;
-  background-color: red;
-  width: 350px;
-  height: auto;
+  background-color: rgba(0,203,0,0.7);
+  text-align: right;
+
 }
 
 .ktyping {
@@ -96,11 +131,4 @@ width: 350px;
 .utyping {
   margin-left: auto;
   width: 100px;
-}
-
-.emoji {
-    width: 1.1em;
-    height: 1.1em;
-    padding: 0 0 0 0;
-    vertical-align: -0.15em;
 }

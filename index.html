@@ -17,21 +17,24 @@
     </head>
     <body>
       <main id="principal">
+        <div id ="fillechoisie">
+
+        </div>
         <h1>Geek rencontre</h1>
         <div id="presentation">
-          <label for="pseudo">Votre pseudo :</label>
+          <label >Votre pseudo :</label>
           <input type="text" name="pseudo" value="">
           <h2>Choisit ta partenaire ?</h2>
           </div>
           <section id="girls">
             <figure class="card">
-              <img src="img/girl1.png"  alt="">
+              <img src="img/girl1.png" onclick ="chatter('girl1')" alt="">
             </figure>
             <figure class="card">
-              <img src ="img/girl2.png"  alt="">
+              <img src ="img/girl2.png" onclick ="chatter('girl2')" alt="">
             </figure>
             <figure class="card">
-              <img src="img/girl3.png"  alt="">
+              <img src="img/girl3.png" onclick ="chatter('girl3')" alt="">
             </figure>
           </section>
           <!-- <button type="button" name="button" id="lancerJeu">Commencer le chat</button> -->
@@ -42,14 +45,14 @@
         </div>
         <div id="ecrire">
           <input type="text" name="" value="">
-          <input type="submit" name="" value="Envoyer">
+          <input class ="btn btn-success" type="submit" name="" value="Envoyer">
         </div>
       </main>
       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>
    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
 </script>
-<script src="js/jQueryEmoji.js"></script>
+
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <!-- <script src="jquery-3.2.1.min.js"></script> -->
     <script src="js/plugins.js"></script>
