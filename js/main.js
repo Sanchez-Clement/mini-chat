@@ -12,9 +12,9 @@ var personne;
  */
 function chatter(personne) {
   pseudo = $("#presentation :text").val();
-  var girl1 = ["Bonjour " + pseudo + " Comment vas tu ?", "Est ce que tu geek ?","Moi j'aime bien geeker","Tu me conseille quel explorateur pour explorer ton coeur ?", "je dois partir" ];
-  var girl2 = ["Bonjour " + pseudo, "Mon pere travaille chez Nitendo , j'ai un corps de Ds !","tu es mieux que mes .EXE tu es plus RAR." ,"Veux tu etre ma pokeball?", "je dois partir"];
-  var girl3 = ["Miaoou " + pseudo, "Comment chat va ?", "Miaoouuuuuu maiouuuuuu", "je dois partir"];
+  var girl1 = ["Bonjour " + pseudo + "! Comment vas tu ?", "Est ce que tu geek ?","Moi j'aime bien geeker","Tu me conseille quel explorateur pour explorer ton coeur ?", "je dois partir" ];
+  var girl2 = ["Bonjour " + pseudo, "! Mon pere travaille chez Nitendo , j'ai un corps de Ds !","tu es mieux que mes .EXE tu es plus RAR." ,"Veux tu etre ma pokeball?", "je dois partir"];
+  var girl3 = ["Miaoou " + pseudo, "! Comment chat va ?", "Miaoouuuuuu maiouuuuuu", "je dois partir"];
 
 $("#presentation").hide();
 $("#girls").hide();
@@ -84,8 +84,13 @@ if ($("#chat p:last").text()=="je dois partir") {
  * @return {type}  no return
  */
 function chatting(){
-  $("#chat").append("<p class='utilisateur'>" + $("#ecrire :text").val() + "</p>");
-  $("#ecrire :text").val("")
+  var input = $("#ecrire :text").val();
+     var output = emojione.shortnameToImage(input);
+     console.log(output);
+//  emojione.shortnameToImage($("#ecrire :text").val());
+// document.getElementById('outputText').innerHTML = output;
+  $("#chat").append("<p class='utilisateur'>" +  output + "</p>");
+  $("#ecrire :text").val("");
   $("#chat").scrollTop( $("#chat").height() );
   // $("#chat p:last").addClass("utilisateur");
 

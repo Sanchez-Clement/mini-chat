@@ -82,6 +82,10 @@ body {
   width: 100Px;
 }
 
+#chat .utilisateur img {
+  width: 25px;
+}
+
 #ecrire {
   width: 90%;
   margin: auto;
